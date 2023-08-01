@@ -3,6 +3,7 @@ let bagClicks = 0;
 let easterEggActive = false;
 const earningsElement = document.getElementById('earnings');
 const easterEggElement = document.getElementById('clickEarnings');
+let playGame = false;
 
 function calculateEarnings() {
   const weeklyEarnings = 700000; // 700k
@@ -32,10 +33,14 @@ function calculateEarnings() {
     easterEggElement.textContent = `You blocked £${(bagClicks *averageUpdateRate).toFixed(2)}`
   }
 
-  if(document.visibilityState === "visible"){
-    // spawnEmoji();
+  if(document.visibilityState === "visible" && playGame){
+    spawnEmoji();
   }
 
+}
+
+function enableGame() {
+  playGame = true;
 }
 
 function spawnEmoji() {
