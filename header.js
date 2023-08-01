@@ -33,7 +33,7 @@ function calculateEarnings() {
   }
 
   if(document.visibilityState === "visible"){
-    spawnEmoji();
+    // spawnEmoji();
   }
 
 }
